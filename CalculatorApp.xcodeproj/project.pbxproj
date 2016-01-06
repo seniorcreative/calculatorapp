@@ -36,6 +36,7 @@
 		AA51026C1C3D004B00B7C59D /* CalculatorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5102701C3D004B00B7C59D /* CalculatorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorAppUITests.swift; sourceTree = "<group>"; };
 		AA5102721C3D004B00B7C59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA51027E1C3D00C600B7C59D /* ShareTechMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShareTechMono-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,8 @@
 		AA51025A1C3D004A00B7C59D /* CalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA51027C1C3D007700B7C59D /* Assets */,
+				AA51027B1C3D007100B7C59D /* Classes */,
 				AA51025B1C3D004A00B7C59D /* AppDelegate.swift */,
 				AA51025D1C3D004A00B7C59D /* ViewController.swift */,
 				AA51025F1C3D004A00B7C59D /* Main.storyboard */,
@@ -94,6 +97,29 @@
 				AA5102721C3D004B00B7C59D /* Info.plist */,
 			);
 			path = CalculatorAppUITests;
+			sourceTree = "<group>";
+		};
+		AA51027B1C3D007100B7C59D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AA51027C1C3D007700B7C59D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AA51027D1C3D008100B7C59D /* Fonts */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		AA51027D1C3D008100B7C59D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AA51027E1C3D00C600B7C59D /* ShareTechMono-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
