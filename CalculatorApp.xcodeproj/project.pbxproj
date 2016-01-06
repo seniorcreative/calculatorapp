@@ -13,6 +13,10 @@
 		AA5102631C3D004A00B7C59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5102621C3D004A00B7C59D /* Assets.xcassets */; };
 		AA5102661C3D004A00B7C59D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5102641C3D004A00B7C59D /* LaunchScreen.storyboard */; };
 		AA5102711C3D004B00B7C59D /* CalculatorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5102701C3D004B00B7C59D /* CalculatorAppUITests.swift */; };
+		AA5102801C3D033200B7C59D /* ButtonNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51027F1C3D033200B7C59D /* ButtonNumeric.swift */; };
+		AA5102811C3D130D00B7C59D /* ShareTechMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA51027E1C3D00C600B7C59D /* ShareTechMono-Regular.ttf */; };
+		AA5102831C3D181E00B7C59D /* ButtonOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5102821C3D181E00B7C59D /* ButtonOperator.swift */; };
+		AA5102851C3D23C000B7C59D /* ButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5102841C3D23C000B7C59D /* ButtonFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 		AA5102701C3D004B00B7C59D /* CalculatorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorAppUITests.swift; sourceTree = "<group>"; };
 		AA5102721C3D004B00B7C59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA51027E1C3D00C600B7C59D /* ShareTechMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShareTechMono-Regular.ttf"; sourceTree = "<group>"; };
+		AA51027F1C3D033200B7C59D /* ButtonNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNumeric.swift; sourceTree = "<group>"; };
+		AA5102821C3D181E00B7C59D /* ButtonOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOperator.swift; sourceTree = "<group>"; };
+		AA5102841C3D23C000B7C59D /* ButtonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +109,9 @@
 		AA51027B1C3D007100B7C59D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AA51027F1C3D033200B7C59D /* ButtonNumeric.swift */,
+				AA5102821C3D181E00B7C59D /* ButtonOperator.swift */,
+				AA5102841C3D23C000B7C59D /* ButtonFunction.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5102811C3D130D00B7C59D /* ShareTechMono-Regular.ttf in Resources */,
 				AA5102661C3D004A00B7C59D /* LaunchScreen.storyboard in Resources */,
 				AA5102631C3D004A00B7C59D /* Assets.xcassets in Resources */,
 				AA5102611C3D004A00B7C59D /* Main.storyboard in Resources */,
@@ -225,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5102801C3D033200B7C59D /* ButtonNumeric.swift in Sources */,
+				AA5102851C3D23C000B7C59D /* ButtonFunction.swift in Sources */,
 				AA51025E1C3D004A00B7C59D /* ViewController.swift in Sources */,
 				AA51025C1C3D004A00B7C59D /* AppDelegate.swift in Sources */,
+				AA5102831C3D181E00B7C59D /* ButtonOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
