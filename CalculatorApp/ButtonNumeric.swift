@@ -12,7 +12,18 @@ import UIKit
 class ButtonNumeric : UIButton {
     
    
-    var value:Int?
+    var value:String?
+    
+    required init(coder aDecoder: NSCoder!) {
+        
+        super.init(coder: aDecoder)!
+        
+        self.backgroundColor        = UIColor.whiteColor()
+        self.alpha                  = 0;
+        self.layer.cornerRadius     = 30
+        self.setTitleColor(UIColor.grayColor(), forState: .Normal)
+        
+    }
     
     
 }

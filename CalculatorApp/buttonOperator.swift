@@ -13,14 +13,16 @@ class ButtonOperator : UIButton {
     
     
     var myOperator:String?
-    
-//    func init()
-//    {
-//        self.backgroundColor = UIColor.orangeColor()
-//    }
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-//    
+
+    required init(coder aDecoder: NSCoder!) {
+        
+        super.init(coder: aDecoder)!
+        
+        self.backgroundColor        = UIColor.orangeColor()
+        self.alpha                  = 1;
+        self.layer.cornerRadius     = 30
+        self.setTitleColor(UIColor.grayColor(), forState: .Normal)
+        
+    }
+
 }

@@ -14,6 +14,16 @@ class ButtonFunction : UIButton {
     
     var myFunction:String?
     
+    required init(coder aDecoder: NSCoder!) {
+        
+        super.init(coder: aDecoder)!
+        
+        self.backgroundColor        = UIColor.grayColor()
+        self.alpha                  = 1;
+        self.layer.cornerRadius     = 30
+        self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        
+    }
     
     
 }

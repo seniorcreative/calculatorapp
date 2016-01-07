@@ -10,40 +10,53 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    // Output label where we will store current value
     @IBOutlet weak var outputLabel: UITextField!
     
     @IBOutlet weak var buttonNumeric1: ButtonNumeric!
     @IBOutlet weak var buttonNumeric2: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric3: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric4: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric5: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric6: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric7: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric8: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric9: ButtonNumeric!
+    @IBOutlet weak var buttonNumeric0: ButtonNumeric!
+    @IBOutlet weak var buttonNumericPoint: ButtonNumeric!
     
     @IBOutlet weak var buttonFunctionClear: ButtonFunction!
+    @IBOutlet weak var buttonFunctionPolarity: ButtonFunction!
     
     @IBOutlet weak var buttonOperatorPlus: ButtonOperator!
+    @IBOutlet weak var buttonOperatorMinus: ButtonOperator!
+    @IBOutlet weak var buttonOperatorDivide: ButtonOperator!
+    @IBOutlet weak var buttonOperatorMultiply: ButtonOperator!
     @IBOutlet weak var buttonOperatorEquals: ButtonOperator!
+    
+    
+    
+    var logic : Logic = Logic()
+    
+    var boolNewOperand:Bool = true
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+    
         
-        
-        
-//        for family: String in UIFont.familyNames()
-//        {
-//            print("\(family)")
-//            for names: String in UIFont.fontNamesForFamilyName(family)
-//            {
-//                print("== \(names)")
-//            }
-//        }
-        
-        
-
+        outputLabel.text = String(Double(0))
         outputLabel.backgroundColor     = UIColor(colorLiteralRed: 0.9, green: 0.9, blue: 0.9, alpha: 0.9)
         outputLabel.layer.cornerRadius  = 10
         
         prepareNumericButtons()
         prepareFunctionButtons()
         prepareOperatorButtons()
+        
         
     }
 
@@ -58,20 +71,37 @@ class ViewController: UIViewController {
     func prepareNumericButtons()
     {
         
-        let buttons = [buttonNumeric1, buttonNumeric2]
         
-        var buttonNumber = 1
-        
-        for button in buttons
+        let numberButtons : [String: ButtonNumeric] = [
+            "1" : buttonNumeric1,
+            "2" : buttonNumeric2,
+            "3" : buttonNumeric3,
+            "4" : buttonNumeric4,
+            "5" : buttonNumeric5,
+            "6" : buttonNumeric6,
+            "7" : buttonNumeric7,
+            "8" : buttonNumeric8,
+            "9" : buttonNumeric9,
+            "0" : buttonNumeric0,
+            "." : buttonNumericPoint,
+        ]
+
+        var counter : Int = 0
+    
+        for (symbol, button) in numberButtons
         {
-            button.alpha = 1;
-            button.backgroundColor = UIColor.whiteColor()
-            button.layer.cornerRadius = 30
-            button.setTitle(String(buttonNumber), forState: .Normal)
-            button.setTitleColor(UIColor.grayColor(), forState: .Normal)
-            button.value = buttonNumber
-                
-            buttonNumber++
+            
+            button.setTitle(String(symbol), forState: .Normal)
+            button.value = String(symbol)
+            
+            let delayAmount : Double = Double(counter) * 0.75
+            
+            UIView.animateWithDuration(3, delay: delayAmount, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+                button.alpha = 1
+            }, completion: nil)
+            
+            counter++
+            
         }
         
     }
@@ -79,34 +109,38 @@ class ViewController: UIViewController {
     func prepareFunctionButtons()
     {
         
-        buttonFunctionClear.alpha = 1;
-        buttonFunctionClear.backgroundColor = UIColor.grayColor()
-        buttonFunctionClear.layer.cornerRadius = 30
-        buttonFunctionClear.setTitle("C", forState: .Normal)
-        buttonFunctionClear.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        buttonFunctionClear.myFunction = "C"
+        
+        let functionButtons : [String: ButtonFunction] = [
+            "C" : buttonFunctionClear,
+            "+/-" : buttonFunctionPolarity
+        ]
+        
+        for (symbol, button) in functionButtons
+        {
+            button.setTitle(symbol, forState: .Normal)
+            button.myFunction = symbol
+        }
         
     }
     
     func prepareOperatorButtons()
     {
         
-        var operatorButtons = [buttonOperatorPlus,buttonOperatorEquals]
-        
-        var operators = ["+", "="] // "-", "/", "x"]
-        
-        
+    
+        let operatorButtons : [String: ButtonOperator] = [
+            "+" : buttonOperatorPlus,
+            "-" : buttonOperatorMinus,
+            "/" : buttonOperatorDivide,
+            "*" : buttonOperatorMultiply,
+            "=" :buttonOperatorEquals
+        ]
         
         var buttonNumber = 0
         
-        for button in operatorButtons
+        for (symbol, button) in operatorButtons
         {
-            button.alpha = 1;
-            button.backgroundColor = UIColor.orangeColor()
-            button.layer.cornerRadius = 30
-            button.setTitle(operators[buttonNumber], forState: .Normal)
-            button.setTitleColor(UIColor.grayColor(), forState: .Normal)
-            button.myOperator = operators[buttonNumber]
+//            button.setTitle(symbol, forState: .Normal)
+            button.myOperator = symbol
             
             buttonNumber++
         }
@@ -118,6 +152,13 @@ class ViewController: UIViewController {
         
         let clickedButton = sender as! ButtonNumeric
         let stringValue = String(clickedButton.value!)
+        
+        if (boolNewOperand)
+        {
+            outputLabel.text = ""
+            boolNewOperand = false
+        }
+        
         outputLabel.text = outputLabel.text! + stringValue
     
     }
@@ -125,22 +166,36 @@ class ViewController: UIViewController {
     @IBAction func btnOperatorAction(sender: AnyObject) {
         
         let clickedButton = sender as! ButtonOperator
-        let stringValue = clickedButton.myOperator!
-    
-        print("Operator \(stringValue)")
-//        outputLabel.text = outputLabel.text! + stringValue
+        if clickedButton.myOperator != nil
+        {
+ 
+            let operatorValue = clickedButton.myOperator!
+            boolNewOperand = true
+            
+            outputLabel.text = self.logic.calculateArithmetic(Double(outputLabel.text!)!, operatorValue: operatorValue)
+            
+
+        }
         
     }
     
     @IBAction func btnFunctionAction(sender: AnyObject) {
         
-        print("Clearing")
+
         let clickedButton = sender as! ButtonFunction
         
         // Clear function
         if (clickedButton.myFunction == "C")
         {
-            self.outputLabel.text = ""
+            self.outputLabel.text = String(Double(0))
+            self.logic.operands = []
+            self.logic.operators = []
+        }
+        
+        
+        if (clickedButton.myFunction == "+/-" && Int(self.outputLabel.text!) != 0)
+        {
+            self.outputLabel.text = NSString(format: "%.2f", Double(self.outputLabel.text!)! * -1) as String
         }
         
     }

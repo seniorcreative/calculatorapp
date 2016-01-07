@@ -17,6 +17,7 @@
 		AA5102811C3D130D00B7C59D /* ShareTechMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA51027E1C3D00C600B7C59D /* ShareTechMono-Regular.ttf */; };
 		AA5102831C3D181E00B7C59D /* ButtonOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5102821C3D181E00B7C59D /* ButtonOperator.swift */; };
 		AA5102851C3D23C000B7C59D /* ButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5102841C3D23C000B7C59D /* ButtonFunction.swift */; };
+		AA9D6B241C3E2FC10022C3EE /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9D6B231C3E2FC10022C3EE /* Logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		AA51027F1C3D033200B7C59D /* ButtonNumeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNumeric.swift; sourceTree = "<group>"; };
 		AA5102821C3D181E00B7C59D /* ButtonOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOperator.swift; sourceTree = "<group>"; };
 		AA5102841C3D23C000B7C59D /* ButtonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFunction.swift; sourceTree = "<group>"; };
+		AA9D6B231C3E2FC10022C3EE /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				AA51027F1C3D033200B7C59D /* ButtonNumeric.swift */,
 				AA5102821C3D181E00B7C59D /* ButtonOperator.swift */,
 				AA5102841C3D23C000B7C59D /* ButtonFunction.swift */,
+				AA9D6B231C3E2FC10022C3EE /* Logic.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				AA5102851C3D23C000B7C59D /* ButtonFunction.swift in Sources */,
 				AA51025E1C3D004A00B7C59D /* ViewController.swift in Sources */,
 				AA51025C1C3D004A00B7C59D /* AppDelegate.swift in Sources */,
+				AA9D6B241C3E2FC10022C3EE /* Logic.swift in Sources */,
 				AA5102831C3D181E00B7C59D /* ButtonOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +432,7 @@
 				AA5102771C3D004B00B7C59D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA5102781C3D004B00B7C59D /* Build configuration list for PBXNativeTarget "CalculatorAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +441,7 @@
 				AA51027A1C3D004B00B7C59D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
