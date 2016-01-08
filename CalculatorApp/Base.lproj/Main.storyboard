@@ -44,51 +44,6 @@
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-4J-ice" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="463" width="60" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="24"/>
-                                <state key="normal" title="="/>
-                                <connections>
-                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k74-nE-slk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-uS-8jv" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="200" y="395" width="60" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
-                                <state key="normal" title="0"/>
-                                <connections>
-                                    <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="piG-zi-ssK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-M3-Ufb" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="327" width="60" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="÷"/>
-                                <connections>
-                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIQ-rr-nIv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-Dk-U0h" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="395" width="60" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="✕"/>
-                                <connections>
-                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxS-Z6-ZlR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-uZ-mDt" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="395" width="60" height="60"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="16"/>
-                                <state key="normal" title="."/>
-                                <connections>
-                                    <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHO-T7-bJw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHl-uS-wDH" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
                                 <rect key="frame" x="28" y="191" width="60" height="60"/>
                                 <animations/>
@@ -114,6 +69,15 @@
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVM-yq-DWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-4J-ice" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="295" y="463" width="60" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="24"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k74-nE-slk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-CB-V3L" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
@@ -188,6 +152,15 @@
                                     <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUT-gA-q9y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-uS-8jv" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="202" y="395" width="60" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="piG-zi-ssK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-G8-o80" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
                                 <rect key="frame" x="295" y="259" width="60" height="60"/>
                                 <animations/>
@@ -197,6 +170,24 @@
                                     <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxs-Xd-6My"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-M3-Ufb" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="295" y="327" width="60" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="÷"/>
+                                <connections>
+                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIQ-rr-nIv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-Dk-U0h" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="295" y="395" width="60" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="✕"/>
+                                <connections>
+                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxS-Z6-ZlR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU9-0G-PsC" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
                                 <rect key="frame" x="113" y="116" width="60" height="60"/>
                                 <animations/>
@@ -204,6 +195,15 @@
                                 <state key="normal" title="+/-"/>
                                 <connections>
                                     <action selector="btnFunctionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXq-Vs-F3V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-uZ-mDt" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="113" y="395" width="60" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="16"/>
+                                <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHO-T7-bJw"/>
                                 </connections>
                             </button>
                         </subviews>

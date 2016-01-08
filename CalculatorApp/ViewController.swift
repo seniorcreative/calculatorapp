@@ -71,36 +71,31 @@ class ViewController: UIViewController {
     func prepareNumericButtons()
     {
         
-        
-        let numberButtons : [String: ButtonNumeric] = [
-            "1" : buttonNumeric1,
-            "2" : buttonNumeric2,
-            "3" : buttonNumeric3,
-            "4" : buttonNumeric4,
-            "5" : buttonNumeric5,
-            "6" : buttonNumeric6,
-            "7" : buttonNumeric7,
-            "8" : buttonNumeric8,
-            "9" : buttonNumeric9,
-            "0" : buttonNumeric0,
-            "." : buttonNumericPoint,
+        let numberButtons : [ButtonNumeric] = [
+            buttonNumeric1,
+            buttonNumeric2,
+            buttonNumeric3,
+            buttonNumeric4,
+            buttonNumeric5,
+            buttonNumeric6,
+            buttonNumeric7,
+            buttonNumeric8,
+            buttonNumeric9,
+            buttonNumericPoint,
+            buttonNumeric0
         ]
-
-        var counter : Int = 0
-    
-        for (symbol, button) in numberButtons
+        
+        for var b = 0; b < numberButtons.count; b++
         {
             
-            button.setTitle(String(symbol), forState: .Normal)
-            button.value = String(symbol)
+            numberButtons[b].value = numberButtons[b].currentTitle
             
-            let delayAmount : Double = Double(counter) * 0.75
             
-            UIView.animateWithDuration(3, delay: delayAmount, options: UIViewAnimationOptions.CurveEaseOut, animations:{
-                button.alpha = 1
-            }, completion: nil)
+            let delayAmount : Double = Double(b) * 0.1
             
-            counter++
+            UIView.animateWithDuration(0.2, delay: delayAmount, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+                numberButtons[b].alpha = 1
+                }, completion: nil)
             
         }
         
@@ -135,6 +130,8 @@ class ViewController: UIViewController {
             "=" :buttonOperatorEquals
         ]
         
+        buttonOperatorEquals.backgroundColor = UIColor.blackColor()
+        
         var buttonNumber = 0
         
         for (symbol, button) in operatorButtons
@@ -157,6 +154,11 @@ class ViewController: UIViewController {
         {
             outputLabel.text = ""
             boolNewOperand = false
+        }
+        
+        if (self.outputLabel.text == "0")
+        {
+            outputLabel.text = ""
         }
         
         outputLabel.text = outputLabel.text! + stringValue
@@ -187,7 +189,7 @@ class ViewController: UIViewController {
         // Clear function
         if (clickedButton.myFunction == "C")
         {
-            self.outputLabel.text = String(Double(0))
+            self.outputLabel.text = "0"
             self.logic.operands = []
             self.logic.operators = []
         }
