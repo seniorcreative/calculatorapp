@@ -51,13 +51,21 @@ class ViewController: UIViewController {
         
     
         
-        outputLabel.text = String(Double(0))
+        outputLabel.text = "Hello" // String(Double(0))
         outputLabel.backgroundColor     = UIColor(colorLiteralRed: 0.9, green: 0.9, blue: 0.9, alpha: 0.9)
         outputLabel.layer.cornerRadius  = 10
         
         prepareNumericButtons()
         prepareFunctionButtons()
         prepareOperatorButtons()
+        
+        
+        // Fade the output in
+        outputLabel.alpha = 0;
+        UIView.animateWithDuration(2, delay: 1.5, options: UIViewAnimationOptions.CurveEaseOut, animations:{
+            self.outputLabel.alpha = 1
+            }, completion: nil)
+
         
         
     }

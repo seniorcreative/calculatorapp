@@ -69,13 +69,32 @@ class Logic{
             }
             
             self.operands[self.operands.count-1] = valueCalculated.doubleValue
-        
-            return NSString(format: "%.2f", valueCalculated.doubleValue) as String
+            
+            
+            // Try to cast as Int, otherwise send back a double...
+            
+//            if (Int(valueCalculated.integerValue) != nil)
+//            {
+//                return String(valueCalculated.integerValue)
+//            }
+//            else
+//            {
+                return NSString(format: "%.2f", valueCalculated.doubleValue) as String
+//            }
+            
+            
         
         }
         else
         {
-            return String(operandValue)
+            if (Int(operandValue) != nil)
+            {
+                return String(Int(operandValue))
+            }
+            else
+            {
+                return String(operandValue)
+            }
         }
         
         

@@ -40,14 +40,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calculator 1.0" textAlignment="right" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="xim-Na-T98">
-                                <rect key="frame" x="20" y="28" width="335" height="70"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHl-uS-wDH" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="191" width="60" height="60"/>
+                                <rect key="frame" x="28" y="176" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="1"/>
@@ -56,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF0-CI-XEn" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="118" width="60" height="60"/>
+                                <rect key="frame" x="113" y="103" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="19"/>
                                 <state key="normal" title="C"/>
@@ -64,17 +58,17 @@
                                     <action selector="btnFunctionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88Z-Ek-GAk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-cO-KZv" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="191" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVA-L2-m5l" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="28" y="103" width="60" height="60"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="26"/>
-                                <state key="normal" title="+"/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="19"/>
+                                <state key="normal" title="AC"/>
                                 <connections>
-                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVM-yq-DWg"/>
+                                    <action selector="btnFunctionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJP-e7-Bl2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-4J-ice" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="463" width="60" height="60"/>
+                                <rect key="frame" x="295" y="448" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="24"/>
                                 <state key="normal" title="="/>
@@ -83,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-CB-V3L" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="191" width="60" height="60"/>
+                                <rect key="frame" x="113" y="176" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="2"/>
@@ -92,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlF-Ao-Wzb" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="202" y="191" width="60" height="60"/>
+                                <rect key="frame" x="202" y="176" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="3"/>
@@ -101,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-dI-h1C" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="259" width="60" height="60"/>
+                                <rect key="frame" x="28" y="244" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="4"/>
@@ -110,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-vb-KAy" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="259" width="60" height="60"/>
+                                <rect key="frame" x="113" y="244" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="5"/>
@@ -119,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHH-qx-su3" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="202" y="259" width="60" height="60"/>
+                                <rect key="frame" x="202" y="244" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="6"/>
@@ -128,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejo-x0-BVl" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="327" width="60" height="60"/>
+                                <rect key="frame" x="28" y="312" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="7"/>
@@ -137,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRM-OA-ITE" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="327" width="60" height="60"/>
+                                <rect key="frame" x="113" y="312" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="8"/>
@@ -146,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf7-xw-MTw" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="202" y="327" width="60" height="60"/>
+                                <rect key="frame" x="202" y="312" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="9"/>
@@ -155,7 +149,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-uS-8jv" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="202" y="395" width="60" height="60"/>
+                                <rect key="frame" x="202" y="380" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="20"/>
                                 <state key="normal" title="0"/>
@@ -164,7 +158,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-G8-o80" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="259" width="60" height="60"/>
+                                <rect key="frame" x="295" y="244" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="26"/>
                                 <state key="normal" title="-"/>
@@ -173,7 +167,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUT-M3-Ufb" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="327" width="60" height="60"/>
+                                <rect key="frame" x="295" y="312" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="÷"/>
@@ -182,7 +176,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io1-Dk-U0h" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="395" width="60" height="60"/>
+                                <rect key="frame" x="295" y="380" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="✕"/>
@@ -191,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU9-0G-PsC" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="200" y="118" width="60" height="60"/>
+                                <rect key="frame" x="200" y="103" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="19"/>
                                 <state key="normal" title="+/-"/>
@@ -200,7 +194,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-OT-3Aw" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="295" y="118" width="60" height="60"/>
+                                <rect key="frame" x="295" y="103" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="19"/>
                                 <state key="normal" title="%"/>
@@ -209,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-uZ-mDt" customClass="ButtonNumeric" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="113" y="395" width="60" height="60"/>
+                                <rect key="frame" x="113" y="380" width="60" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="16"/>
                                 <state key="normal" title="."/>
@@ -217,15 +211,21 @@
                                     <action selector="btnNumericAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHO-T7-bJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVA-L2-m5l" customClass="ButtonFunction" customModule="CalculatorApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="118" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-cO-KZv" customClass="ButtonOperator" customModule="CalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="295" y="176" width="60" height="60"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="19"/>
-                                <state key="normal" title="AC"/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="26"/>
+                                <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="btnFunctionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJP-e7-Bl2"/>
+                                    <action selector="btnOperatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVM-yq-DWg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calculator 1.0" textAlignment="right" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="xim-Na-T98">
+                                <rect key="frame" x="20" y="25" width="335" height="70"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ShareTechMono-Regular" family="Share Tech Mono" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
