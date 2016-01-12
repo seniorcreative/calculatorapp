@@ -26,8 +26,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonNumeric0: ButtonNumeric!
     @IBOutlet weak var buttonNumericPoint: ButtonNumeric!
     
+    @IBOutlet weak var buttonFunctionAllClear: ButtonFunction!
     @IBOutlet weak var buttonFunctionClear: ButtonFunction!
     @IBOutlet weak var buttonFunctionPolarity: ButtonFunction!
+    @IBOutlet weak var buttonFunctionPerc: ButtonFunction!
     
     @IBOutlet weak var buttonOperatorPlus: ButtonOperator!
     @IBOutlet weak var buttonOperatorMinus: ButtonOperator!
@@ -106,14 +108,16 @@ class ViewController: UIViewController {
         
         
         let functionButtons : [String: ButtonFunction] = [
-            "C" : buttonFunctionClear,
-            "+/-" : buttonFunctionPolarity
+            "AC"    : buttonFunctionAllClear,
+            "C"     : buttonFunctionClear,
+            "+/-"   : buttonFunctionPolarity,
+            "%"     : buttonFunctionPerc
         ]
         
         for (symbol, button) in functionButtons
         {
             button.setTitle(symbol, forState: .Normal)
-            button.myFunction = symbol
+            button.myFunctionRef = symbol
         }
         
     }
@@ -186,16 +190,28 @@ class ViewController: UIViewController {
 
         let clickedButton = sender as! ButtonFunction
         
-        // Clear function
-        if (clickedButton.myFunction == "C")
+        // All clear function
+        if (clickedButton.myFunctionRef == "AC")
         {
             self.outputLabel.text = "0"
             self.logic.operands = []
             self.logic.operators = []
         }
         
+        // Clear function
+        if (clickedButton.myFunctionRef == "C")
+        {
+            self.outputLabel.text = "0"
+        }
         
-        if (clickedButton.myFunction == "+/-" && Int(self.outputLabel.text!) != 0)
+        // Percentage function
+        if (clickedButton.myFunctionRef == "%" && Int(self.outputLabel.text!) != 0)
+        {
+            self.outputLabel.text = NSString(format: "%.2f", Double(self.outputLabel.text!)! / 100) as String
+        }
+        
+        // Reverse polarity flip
+        if (clickedButton.myFunctionRef == "+/-" && Int(self.outputLabel.text!) != 0)
         {
             self.outputLabel.text = NSString(format: "%.2f", Double(self.outputLabel.text!)! * -1) as String
         }

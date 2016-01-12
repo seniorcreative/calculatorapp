@@ -12,7 +12,7 @@ import UIKit
 class ButtonFunction : UIButton {
     
     
-    var myFunction:String?
+    var myFunctionRef:String?
     
     required init(coder aDecoder: NSCoder!) {
         
